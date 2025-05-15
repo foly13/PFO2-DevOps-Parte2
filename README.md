@@ -1,15 +1,23 @@
-# Mi Portafolio
+# Mi Portafolio 
 
-Profe, intenté seguir de la mejor manera posible las consignas de la PFO. Espero que le guste.
+Profe, use un proyecto que tenia de la materia Frontend, preparado para ser ejecutado dentro de un contenedor Docker con Nginx.
 
-## Estructura del Proyecto
+---
+## Ejecución con Docker
 
-- `index.html`: Página principal del portafolio.
-- `aboutMe.html`: Breve descripción de mi.
-- `skills.html`: Sección que incluye tablas para mostrar habilidades.
-- `contact.html`: Sección que incluye un formulario de contacto.
-- `projects.html`: Archivo en construcción, que se actualizará para mostrar proyectos futuros.
-- `styles.css`: Hoja de estilos para todos los documentos.
-- `images/`: Carpeta que contiene las imágenes del proyecto.
- ## Imagen de Portafolio
-![Mi Portafolio](./assets/images/UltimaCaptura.jpg "Portafolio")
+Este proyecto está configurado para ser servido desde un contenedor Docker usando Nginx.
+
+### Pasos para ejecutar:
+
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/foly13/PFO2-DevOps-Parte2
+   cd PFO2-DevOps-Parte2/FRONT
+2. Construir la imagen Docker:
+   ```bash
+   docker build -t web-html-css .
+3. Ejecutar el contenedor:
+   ```bash  
+    docker run -d -p 8080:80 web-html-css
+4. Abrir el navegador y acceder a:
+http://localhost:8080
